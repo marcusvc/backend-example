@@ -1,0 +1,21 @@
+resourcePackages:
+  - edu.marcus.backend.model
+  - edu.marcus.backend.rest
+prettyPrint: true
+cacheTTL: 0
+openAPI:
+  servers:
+    - url: /backend-example
+  info:
+    version: 0.0.1-SNAPSHOT
+    title: Marcus' Backend Example
+    description: This is a sample project to present a backend API REST
+    contact:
+      name: Marcus Vinícius Carvalho da Silva
+      email: marcusvcsilva@gmail.com
+    license:
+      name: Apache 2.0
+      url: http://www.apache.org/licenses/LICENSE-2.0.html
+    externalDocs:
+      url: /api-docs
+      description: Find more info here
