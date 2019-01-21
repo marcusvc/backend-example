@@ -3,16 +3,15 @@ package edu.marcus.backend.rest.model;
 import edu.marcus.backend.business.model.Description;
 
 /**
- * TODO: javadoc
- *
+ * Represents a description resource
  */
-public class DescriptionCover {
+public class DescriptionResource {
 	
 	private String text;
 	private String version;
 	private String license;
 
-	public DescriptionCover(Description description) {
+	public DescriptionResource(Description description) {
 		setLicense(description.getLicense());
 		setText(description.getText());
 		setVersion(description.getVersion());

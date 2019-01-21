@@ -12,12 +12,15 @@ import org.slf4j.LoggerFactory;
 
 import edu.marcus.backend.business.DescriptionBC;
 import edu.marcus.backend.business.model.Description;
-import edu.marcus.backend.rest.model.DescriptionCover;
+import edu.marcus.backend.rest.model.DescriptionResource;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
+/**
+ * REST endpoint for description resource
+ */
 @Path("description")
 public class DescriptionREST {
 	
@@ -35,7 +38,7 @@ public class DescriptionREST {
 					@ApiResponse(
 							content = @Content(
 									mediaType = "application/json",
-									schema = @Schema(implementation = DescriptionCover.class)
+									schema = @Schema(implementation = DescriptionResource.class)
 					)
 			),
             @ApiResponse(responseCode = "400", description = "Bad request"),
@@ -45,7 +48,7 @@ public class DescriptionREST {
 	public Response getDescriptio() {
 		try {
 			Description description = descriptionBC.retrieve();
-			return Response.ok(new DescriptionCover(description), MediaType.APPLICATION_JSON).build();
+			return Response.ok(new DescriptionResource(description), MediaType.APPLICATION_JSON).build();
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 			return Response.serverError().build();

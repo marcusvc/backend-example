@@ -3,8 +3,7 @@ package edu.marcus.backend.business.model;
 import edu.marcus.backend.persistence.model.DescriptionEntity;
 
 /**
- * TODO: javadoc
- *
+ * Business POJO that represents a description. Must be created based on a description entity.
  */
 public class Description {
 	

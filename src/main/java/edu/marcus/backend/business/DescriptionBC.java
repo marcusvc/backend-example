@@ -8,8 +8,7 @@ import edu.marcus.backend.persistence.DescriptionDAO;
 import edu.marcus.backend.persistence.model.DescriptionEntity;
 
 /**
- * TODO: javadoc
- *
+ * Description business controller
  */
 @Dependent
 public class DescriptionBC {
@@ -18,13 +17,13 @@ public class DescriptionBC {
 	private DescriptionDAO descriptionDAO;
 	
 	/**
-	 * TODO: javadoc
-	 * @return
+	 * Retrieves a description bean
+	 * @return description bean
 	 */
 	public Description retrieve() {
 		DescriptionEntity descriptionEntity = descriptionDAO.retrieve();
 		
-		//Some business logic
+		// implement some business logic
 		
 		return new Description(descriptionEntity);
 	}

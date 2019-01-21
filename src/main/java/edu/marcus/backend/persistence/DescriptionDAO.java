@@ -5,15 +5,14 @@ import javax.enterprise.context.Dependent;
 import edu.marcus.backend.persistence.model.DescriptionEntity;
 
 /**
- * TODO: javadoc
- *
+ * DAO responsible for access description data
  */
 @Dependent
 public class DescriptionDAO {
 	
 	/**
-	 * TODO: javadoc
-	 * @return
+	 * Retrieves description entity
+	 * @return description entity
 	 */
 	public DescriptionEntity retrieve() {
 		return new DescriptionEntity();

@@ -1,8 +1,7 @@
 package edu.marcus.backend.persistence.model;
 
 /**
- * TODO: javadoc
- *
+ * Entity to model de description of this API
  */
 public class DescriptionEntity {
 	private String text = "This is a sample project to present a backend API REST";
